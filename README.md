@@ -8,7 +8,15 @@ The scope of this module is to provide an interactive way to select items from a
 
 [![asciicast](https://asciinema.org/a/xctv6HbCj7A3jQ0ppkBN0hjdE.svg)](https://asciinema.org/a/xctv6HbCj7A3jQ0ppkBN0hjdE)
 
-# Usage
+## Install
+
+```powershell
+Install-Module -Name InteractiveMenu
+```
+
+Or manual download from [PowershellGallery](https://www.powershellgallery.com/packages/InteractiveMenu)
+
+## Usage
 
 Usage can be found in the [test.ps1](https://github.com/bibistroc/powershell-interactive-menu/blob/master/test.ps1) file:
 
