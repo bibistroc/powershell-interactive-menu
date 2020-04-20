@@ -1,4 +1,4 @@
-Import-Module .\InteractiveMenu.psd1
+Import-Module .\InteractiveMenu\InteractiveMenu.psd1
 
 # Multiple selection menu
 
