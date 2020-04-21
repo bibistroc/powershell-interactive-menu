@@ -9,7 +9,27 @@ class InteractiveMultiMenuItem {
     [string]$Info
     [string]$Url
 
+    InteractiveMultiMenuItem([object]$itemInfo, [string]$label, [int]$order) {
+        $this.Init($itemInfo, $label, $false, $order, $null, $null, $null);
+    }
+
+    InteractiveMultiMenuItem([object]$itemInfo, [string]$label, [bool]$selected, [int]$order) {
+        $this.Init($itemInfo, $label, $selected, $order, $null, $null, $null);
+    }
+
+    InteractiveMultiMenuItem([object]$itemInfo, [string]$label, [bool]$selected, [int]$order, [bool]$readonly) {
+        $this.Init($itemInfo, $label, $selected, $order, $readonly, $null, $null);
+    }
+
+    InteractiveMultiMenuItem([object]$itemInfo, [string]$label, [bool]$selected, [int]$order, [bool]$readonly, [string]$info) {
+        $this.Init($itemInfo, $label, $selected, $order, $readonly, $info, $null);
+    }
+
     InteractiveMultiMenuItem([object]$itemInfo, [string]$label, [bool]$selected, [int]$order, [bool]$readonly, [string]$info, [string]$url) {
+        $this.Init($itemInfo, $label, $selected, $order, $readonly, $info, $url);
+    }
+
+    hidden Init([object]$itemInfo, [string]$label, [bool]$selected, [int]$order, [bool]$readonly, [string]$info, [string]$url) {
         $this.ItemInfo = $itemInfo
         $this.Label = $label
         $this.Selected = $selected
