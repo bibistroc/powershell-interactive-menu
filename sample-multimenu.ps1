@@ -1,7 +1,6 @@
 Import-Module .\InteractiveMenu\InteractiveMenu.psd1
 
-# Multiple selection menu
-
+# Multiple selection items
 $multiMenuOptions = @(
     Get-InteractiveMultiMenuOption `
         -Item "Sample option deselected" `
@@ -43,9 +42,23 @@ $multiMenuOptions = @(
         -Info "This is some info"
 )
 
+$options = @{
+    HeaderColor = [ConsoleColor]::Magenta;
+    HelpColor = [ConsoleColor]::Cyan;
+    CurrentItemColor = [ConsoleColor]::DarkGreen;
+    LinkColor = [ConsoleColor]::DarkCyan;
+    CurrentItemLinkColor = [ConsoleColor]::Black;
+    MenuDeselected = "[ ]";
+    MenuSelected = "[x]";
+    MenuCannotSelect = "[/]";
+    MenuCannotDeselect = "[!]";
+    MenuInfoColor = [ConsoleColor]::DarkYellow;
+    MenuErrorColor = [ConsoleColor]::DarkRed;
+}
+
 $header = "Demo of the multi-selection menu"
 
-$selectedOptions = Get-InteractiveMenuUserSelection -Header $header -Items $multiMenuOptions
+$selectedOptions = Get-InteractiveMenuUserSelection -Header $header -Items $multiMenuOptions -Options $options
 
 $selectedOptions | Format-List
 
