@@ -1,9 +1,9 @@
 # Interactive Multi Menu
 
 ## Demo
-> //to be done
+[![asciicast](https://asciinema.org/a/IbuA6vFBCcN9CQImZYLsHIXUu.svg)](https://asciinema.org/a/IbuA6vFBCcN9CQImZYLsHIXUu)
 
-# Install
+## Install
 
 ```powershell
 Install-Module -Name InteractiveMenu
