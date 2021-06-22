@@ -43,7 +43,7 @@ $options = @{
     HelpColor = [ConsoleColor]::Cyan
     ErrorColor = [ConsoleColor]::DarkRed
     HighlightColor = [ConsoleColor]::DarkGreen
-    OptionSeperator = "      "
+    OptionSeparator = "      "
 }
 $menu.SetOptions($options)
 
@@ -78,7 +78,7 @@ $options = @{
     HelpColor = [ConsoleColor]::Cyan
     ErrorColor = [ConsoleColor]::DarkRed
     HighlightColor = [ConsoleColor]::DarkGreen
-    OptionSeperator = "      "
+    OptionSeparator = "      "
 }
 
 # Define the question of the menu
@@ -94,9 +94,11 @@ $answer = Get-InteractiveMenuChooseUserSelection -Question $question -Answers $a
 ### Class `InteractiveMenuChooseMenuItem`
 
 #### Constructors
+
 * `InteractiveMenuChooseMenuItem([string]$label, [string]$value, [string]$info)`
 
 #### Fields
+
 * **[Mandatory]** `[string]$Label` - The text that you want to show for your option
 * **[Mandatory]** `[string]$Value` - The value that you want returned if the user selects it
 * **[Mandatory]** `[string]$Info` - The information about the option. This information is displayed under the options
@@ -104,20 +106,24 @@ $answer = Get-InteractiveMenuChooseUserSelection -Question $question -Answers $a
 ### Class `InteractiveMenuChooseMenu`
 
 #### Constructors
+
 * `InteractiveMenuChooseMenu([string]$question, [InteractiveMenuChooseMenuItem[]]$options)`
 
 #### Fields
+
 * **[Mandatory]** `[string]$question` - The question that you want to show above the options
 * **[Mandatory]** `[InteractiveMenuChooseMenuItem[]]$options` - The list of answers to display in the menu
 
 #### Methods
+
 * `[string] GetAnswer()` - Execute this method to trigger the menu and get the answer that the user selected
 * `[void] SetOptions([hashtable]$options)` - Execute this method to alter the options of the menu (more details in the [Options](#Options) section)
 
 ## Options
+
 * `MenuInfoColor` - Color of the item information. Default: `[ConsoleColor]::DarkYellow`
 * `QuestionColor` - Color of the question text. Default: `[ConsoleColor]::Magenta`
 * `HelpColor` - Color of the help items. Default: `[ConsoleColor]::Cyan`
 * `ErrorColor` - Color of the errors. Default: `[ConsoleColor]::DarkRed`
 * `HighlightColor` - Color of the current selected item. Default: `[ConsoleColor]::DarkGreen`
-* `OptionSeperator` - The separator between the answers. Default: "<kbd>space</kbd><kbd>space</kbd><kbd>space</kbd><kbd>space</kbd><kbd>space</kbd><kbd>space</kbd>" (6 spaces)
+* `OptionSeparator` - The separator between the answers. Default: "<kbd>space</kbd><kbd>space</kbd><kbd>space</kbd><kbd>space</kbd><kbd>space</kbd><kbd>space</kbd>" (6 spaces)

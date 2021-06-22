@@ -322,7 +322,7 @@ class InteractiveMenuChooseMenu {
     [ValidateNotNullOrEmpty()][ConsoleColor]$HelpColor = [ConsoleColor]::Cyan
     [ValidateNotNullOrEmpty()][ConsoleColor]$ErrorColor = [ConsoleColor]::DarkRed
     [ValidateNotNullOrEmpty()][ConsoleColor]$HighlightColor = [ConsoleColor]::DarkGreen
-    [ValidateNotNullOrEmpty()][string]$OptionSeperator = "      "
+    [ValidateNotNullOrEmpty()][string]$OptionSeparator = "      "
 
     hidden [int]$CurrentIndex = 0
     hidden [InteractiveMenuChooseMenuItem]$SelectedOption = $null
@@ -382,7 +382,7 @@ class InteractiveMenuChooseMenu {
                 $backgroundColor = $this.HighlightColor
             }
             Write-Host " $($_.Label) " -NoNewline -ForegroundColor $foregroundColor -BackgroundColor $backgroundColor
-            Write-Host $this.OptionSeperator -NoNewline
+            Write-Host $this.OptionSeparator -NoNewline
             $i++
         }
         Write-Host

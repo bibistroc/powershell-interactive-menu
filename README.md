@@ -7,9 +7,11 @@
 The scope of this module is to provide some interactive menus to be used in powershell.
 
 ### Interactive multi menu
+
 [![asciicast](https://asciinema.org/a/IbuA6vFBCcN9CQImZYLsHIXUu.svg)](https://asciinema.org/a/IbuA6vFBCcN9CQImZYLsHIXUu)
 
 ### Interactive choose menu
+
 [![asciicast](https://asciinema.org/a/wdIQTAFPqnsu36RECXv8MAXrH.svg)](https://asciinema.org/a/wdIQTAFPqnsu36RECXv8MAXrH)
 
 ## Install

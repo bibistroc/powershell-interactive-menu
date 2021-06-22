@@ -18,7 +18,7 @@ $options = @{
     HelpColor = [ConsoleColor]::Cyan;
     ErrorColor = [ConsoleColor]::DarkRed;
     HighlightColor = [ConsoleColor]::DarkGreen;
-    OptionSeperator = "      ";
+    OptionSeparator = "      ";
 }
 
 $answer = Get-InteractiveMenuChooseUserSelection -Question "Sample Question" -Answers $answers -Options $options

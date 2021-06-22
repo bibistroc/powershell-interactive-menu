@@ -1,6 +1,7 @@
 # Interactive Multi Menu
 
 ## Demo
+
 [![asciicast](https://asciinema.org/a/IbuA6vFBCcN9CQImZYLsHIXUu.svg)](https://asciinema.org/a/IbuA6vFBCcN9CQImZYLsHIXUu)
 
 ## Install
@@ -113,6 +114,7 @@ $selectedOptions = Get-InteractiveMenuUserSelection -Header $header -Items $menu
 ### Class `InteractiveMultiMenuItem`
 
 #### Constructors
+
 * `InteractiveMultiMenuItem([object]$itemInfo, [string]$label, [int]$order)`
 * `InteractiveMultiMenuItem([object]$itemInfo, [string]$label, [bool]$selected, [int]$order)`
 * `InteractiveMultiMenuItem([object]$itemInfo, [string]$label, [bool]$selected, [int]$order, [bool]$readonly)`
@@ -120,6 +122,7 @@ $selectedOptions = Get-InteractiveMenuUserSelection -Header $header -Items $menu
 * `InteractiveMultiMenuItem([object]$itemInfo, [string]$label, [bool]$selected, [int]$order, [bool]$readonly, [string]$info, [string]$url)`
 
 #### Fields
+
 * **[Mandatory]** `[object]$ItemInfo` - The item that you want returned if the user selects it
 * **[Mandatory]** `[string]$Label` - The text that you want to show for your option
 * **[Mandatory]** `[int]$Order` - The order of the item in the list. You can have multiple items on the same order. The script will order them.
@@ -131,17 +134,21 @@ $selectedOptions = Get-InteractiveMenuUserSelection -Header $header -Items $menu
 ### Class `InteractiveMultiMenu`
 
 #### Constructors
+
 * `InteractiveMultiMenu([string]$header, [InteractiveMultiMenuItem[]]$items)`
 
 #### Fields
+
 * **[Mandatory]** `[string]$header` - The text that you want to display above the menu
 * **[Mandatory]** `[InteractiveMultiMenuItem[]]$items` - The list of items to display in the menu
 
 #### Methods
+
 * `[object[]] GetSelections()` - Execute this method to trigger the menu and get the objects that the user selected
 * `[void] SetOptions([hashtable]$options)` - Execute this method to alter the options of the menu (more details in the [Options](#Options) section)
 
 ## Options
+
 * `HeaderColor` - Color of the header. Default: `[ConsoleColor]::Magenta;`
 * `HelpColor` - Color of the help items. Default: `[ConsoleColor]::Cyan;`
 * `CurrentItemColor` - Color of the current selected item. Default: `[ConsoleColor]::DarkGreen;`
