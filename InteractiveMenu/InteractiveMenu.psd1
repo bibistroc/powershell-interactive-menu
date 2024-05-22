@@ -11,7 +11,7 @@
     RootModule        = '.\InteractiveMenu.psm1'
     
     # Version number of this module.
-    ModuleVersion     = '0.4'
+    ModuleVersion     = '0.5'
     
     # Supported PSEditions
     # CompatiblePSEditions = @()
@@ -105,7 +105,7 @@
             IconUri      = 'https://raw.githubusercontent.com/bibistroc/powershell-interactive-menu/master/logo.png'
     
             # ReleaseNotes of this module
-            ReleaseNotes = 'Added choose menu'
+            ReleaseNotes = 'Fix color -1 does not exist when background color is not set in IDE. Using VSCode on a Mac, with PowerShell Core.'
     
         } # End of PSData hashtable
     
