@@ -381,6 +381,15 @@ class InteractiveMenuChooseMenu {
             if ($i -eq $this.CurrentIndex) {
                 $backgroundColor = $this.HighlightColor
             }
+            # Fix if foreground or background color is not valid or set in IDE
+            if (![Enum]::IsDefined([ConsoleColor], $foregroundColor)) {
+                # If foreground color is not a valid color, set it to a default color.
+                $foregroundColor = [ConsoleColor]::White
+            }
+            if (![Enum]::IsDefined([ConsoleColor], $backgroundColor)) {
+                # If background color is not a valid color, set it to a default color.
+                $backgroundColor = [ConsoleColor]::Black
+            }
             Write-Host " $($_.Label) " -NoNewline -ForegroundColor $foregroundColor -BackgroundColor $backgroundColor
             Write-Host $this.OptionSeparator -NoNewline
             $i++
